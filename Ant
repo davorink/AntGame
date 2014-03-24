@@ -1,0 +1,83 @@
+/*
+ * A class to represent an ant
+ * @author K Hutchings
+ * @version 24/03/14
+ */
+public class Ant {
+	private int id;
+	private Brain brain;
+	private String colour;
+	private String state;
+	private boolean resting;
+	private String direction;
+	private int food;
+	
+	/*
+	 * Create the ant object
+	 * @param id The ants ID
+	 * @param brain The ants brain
+	 * @param colour The ants colour
+	 * @param state The ants state
+	 * @param resting If the ant is resting
+	 * @param direction The direction of the ant
+	 * @param food The amount of food particles the ant is carrying
+	 */
+	public Ant(int id, Brain brain, String colour, String state, boolean resting, String direction, int food) {
+		this.id = id;
+		this.brain = brain;
+		this.colour = colour;
+		this.state = state;
+		this.resting = resting;
+		this.direction = direction;
+		this.food = food;
+	}
+	
+	/*
+	 * Return the next action on the ants brain
+	 * @return The next action to the game engine
+	 */
+	public String Action() {
+		return brain.nextInstruction();	
+	}
+	
+	//Setters and getters for the ant's attributes
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	public void setResting(boolean resting) {
+		this.resting = resting;
+	}
+	
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+	
+	public void setFood(int food) {
+		this.food = food;
+	}
+	
+	public int getID() {
+		return this.id;
+	}
+	
+	public String getColour() {
+		return this.colour;
+	}
+	
+	public String getState() {
+		return this.state;
+	}
+	
+	public boolean isResting() {
+		return this.resting;
+	}
+	
+	public String getDirection() {
+		return this.direction;
+	}
+	
+	public int getFood() {
+		return food;
+	}
+}
