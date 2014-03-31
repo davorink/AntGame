@@ -1,13 +1,13 @@
 import java.awt.Point;
 
-/*
+/**
  * A class to represent an ant
  * @author K Hutchings
  * @version 26/03/14
  */
 
 public class Ant {
-	private int id;
+	private int ID;
 	private int brainID;
 	public enum Colour {RED, BLACK}
 	private Colour colour;
@@ -20,7 +20,7 @@ public class Ant {
 	private int direction;
 	private boolean hasFood;
 	
-	/*
+	/**
 	 * Create the ant object
 	 * @param brainID The ID of the ants brain
 	 * @param brain The ants brain
@@ -32,8 +32,8 @@ public class Ant {
 	 */
 	
 	//*What is the default starting direction?
-	public Ant(int id, int brainID, Colour colour, int direction) {
-		this.id = id;
+	public Ant(int ID, int brainID, Colour colour, int direction) {
+		this.ID = ID;
 		this.brainID = brainID;
 		this.colour = colour;
 		this.state = 0;
@@ -42,7 +42,7 @@ public class Ant {
 		this.hasFood = false;
 	}
 	
-	/*
+	/**
 	 * Move the ant onto the next state and reduce any resting time
 	 */
 	public void nextState() {
@@ -52,7 +52,7 @@ public class Ant {
 		}
 	}
 	
-	/*
+	/**
 	 * Sense cells either current, ahead, left or right
 	 * @param the halr enum to represent position to sense
 	 * @param currentXY The current position the ant is on
@@ -78,7 +78,7 @@ public class Ant {
 		}
 	}
 	
-	/*
+	/**
 	 * Turn an ant one place left or right
 	 * @param lr enum specifying L or R
 	 */
@@ -105,7 +105,7 @@ public class Ant {
 	}
 	
 	public int getID() {
-		return this.id;
+		return this.ID;
 	}
 	
 	public int getBrainID() {
